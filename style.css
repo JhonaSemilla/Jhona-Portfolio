@@ -1,0 +1,238 @@
+body {
+  scroll-behavior: smooth;
+  background-color: #e0f7fa;  /* or try #e0f7fa, #f0f9ff */
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(to right, #dbeafe, #e0f2fe);  /* pastel blue shades */
+  padding: 80px 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+.hero img {
+  max-width: 300px;
+  border-radius: 40px;
+  opacity: 0;
+  transform: scale(0.9) translateX(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.hero img.show {
+  opacity: 2;
+  transform: scale(1) translateX(0);
+}
+.section-title {
+  margin-bottom: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.badge-tech {
+  margin: 5px;
+  font-size: 1rem;
+}
+#contact {
+  background: #f8f9fa;
+}
+#contact h5 {
+  margin-bottom: 20px;
+}
+#contact p {
+  margin-bottom: 10px;
+}
+#contact i {
+  margin-right: 8px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+#contact a:hover i {
+  color: #0d6efd;
+  transform: scale(1.2);
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+.hero .btn-primary {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.hero .btn-primary:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(13,110,253,0.6);
+  background-color: #0b5ed7;
+}
+/* Scroll Animations */
+.fade-in, .fade-left, .fade-right, .zoom-in {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in { transform: translateY(30px); }
+.fade-in.show { opacity: 1; transform: translateY(0); }
+.fade-left { transform: translateX(-40px); }
+.fade-left.show { opacity: 1; transform: translateX(0); }
+.fade-right { transform: translateX(40px); }
+.fade-right.show { opacity: 1; transform: translateX(0); }
+.zoom-in { transform: scale(0.8); }
+.zoom-in.show { opacity: 1; transform: scale(1); }
+
+/* Back to Top */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  z-index: 1000;
+}
+#backToTop i {
+  font-size: 1.2rem;
+}
+
+footer {
+  background: #dbeafe; /* Light Sky Blue */
+  color: #222;         /* Dark text */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.navbar-nav .nav-link.active {
+  color: #7b5cf5 !important;   
+  font-weight: bold;
+  border-bottom: 2px solid #7b5cf5;
+}
+
+/* Navbar Style */
+.custom-navbar {
+  background: #fff;
+  padding: 15px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.logo-circle {
+  width: 35px;
+  height: 35px;
+  background: #7b5cf5;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #333;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #7b5cf5;
+}
+
+.navbar-nav .nav-link.active {
+  background: #7b5cf5;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+/* Contact Button */
+.btn-contact {
+  background: #7b5cf5;
+  color: #fff !important;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.btn-contact:hover {
+  background: #5a3cd3;
+}
+
+/* Contact Section */
+.contact-section {
+  background: #fff;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 1.5rem;
+  color: #7b5cf5;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #5a3cd3;
+}
+
+/* Submit Button */
+.btn-submit {
+  background: #7b5cf5;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background: #5a3cd3;
+}
+
+.about-img {
+  max-width: 300px;   /* Control how small you want it */
+  height: auto;
+  margin: 0 auto;     /* Center it if needed */
+  display: block;
+}
+
+.projects-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: left;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.btn-view {
+  display: inline-block;
+  margin: 10px;
+  padding: 8px 14px;
+  background-color: #2563eb; /* Tailwind blue-600 */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
